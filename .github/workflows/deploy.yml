@@ -23,8 +23,9 @@ jobs:
           node-version: 20
 
       # Repo "<owner>.github.io" serve na raiz do domínio (sem base path).
-      # Qualquer outro nome serve em "<owner>.github.io/<repo>" — o site
-      # precisa saber o próprio base path em tempo de build.
+      # Qualquer outro nome serve em "<owner>.github.io/<repo>".
+      # Com public/CNAME (domínio customizado) o base path é ignorado —
+      # next.config.mjs e scripts/build-search.mjs detectam o arquivo.
       - name: Resolve base path
         id: base-path
         run: |

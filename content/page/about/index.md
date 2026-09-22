@@ -31,5 +31,5 @@ O **Dev Log** é o meu espaço para documentar estudos, experimentos e aprendiza
 
 - 💻 [GitHub](https://github.com/ocoelhogabriel)
 - 💼 [LinkedIn](https://linkedin.com/in/ocoelhogabriel)
-- 🌐 [Portfólio](https://ocoelhogabriel.vercel.app)
+- 🌐 [Portfólio](https://portifolio.ocoelhogabriel.dev)
 - ✉️ [gabriel.coelho.hgc@outlook.com.br](mailto:gabriel.coelho.hgc@outlook.com.br)

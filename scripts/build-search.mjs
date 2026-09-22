@@ -5,7 +5,11 @@ import { execFileSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 
-const base = (process.env.BASE_PATH ?? '').replace(/^\/+|\/+$/g, '');
+// Domínio customizado (public/CNAME) serve na raiz — ignora BASE_PATH.
+const hasCustomDomain = fs.existsSync(path.resolve('public/CNAME'));
+const base = hasCustomDomain
+  ? ''
+  : (process.env.BASE_PATH ?? '').replace(/^\/+|\/+$/g, '');
 const out = path.resolve('out');
 const staging = path.resolve('.pagefind-site');
 const bundleOut = path.join(out, 'pagefind');

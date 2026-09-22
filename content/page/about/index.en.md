@@ -31,5 +31,5 @@ I have been working with software development for a few years, with experience i
 
 - 💻 [GitHub](https://github.com/ocoelhogabriel)
 - 💼 [LinkedIn](https://linkedin.com/in/ocoelhogabriel)
-- 🌐 [Portfolio](https://ocoelhogabriel.vercel.app)
+- 🌐 [Portfolio](https://portifolio.ocoelhogabriel.dev)
 - ✉️ [gabriel.coelho.hgc@outlook.com.br](mailto:gabriel.coelho.hgc@outlook.com.br)

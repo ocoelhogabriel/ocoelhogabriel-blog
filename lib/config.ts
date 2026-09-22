@@ -1,6 +1,6 @@
 export const site = {
   name: 'Gabriel Coelho',
-  url: 'https://ocoelhogabriel.github.io/ocoelhogabriel-blog',
+  url: 'https://blog.ocoelhogabriel.dev',
   disqusShortname: 'ocoelhogabriel-ogc-blog',
   title: {
     pt: 'Dev Log | Gabriel Coelho',
