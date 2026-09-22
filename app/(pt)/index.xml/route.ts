@@ -17,12 +17,13 @@ export async function GET() {
       <guid isPermaLink="true">${site.url}${localePath('pt', `/p/${p.slug}`)}</guid>
       <pubDate>${new Date(p.date).toUTCString()}</pubDate>
       <description>${escapeXml(p.description)}</description>
+      <content:encoded><![CDATA[${p.html}]]></content:encoded>
     </item>`,
     )
     .join('\n');
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>${escapeXml(site.title.pt)}</title>
     <link>${site.url}</link>

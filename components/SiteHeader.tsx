@@ -20,8 +20,15 @@ export function SiteHeader({ locale, currentPath }: Props) {
       <div className="max-w-3xl mx-auto flex items-center justify-between px-4 py-4">
         <Link
           href={localePath(locale, '/')}
-          className="font-display text-lg text-bone tracking-[-0.015em] hover:text-copper transition-colors"
+          className="group flex items-center gap-3 font-display text-lg text-bone tracking-[-0.015em] hover:text-copper transition-colors"
         >
+          <img
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/img/avatar-artistic.png`}
+            alt=""
+            width={32}
+            height={32}
+            className="rounded-full border border-copper/45 shadow-[0_0_0_2px_#0e0e10,0_0_0_3px_rgba(184,115,72,0.35)] group-hover:border-copper transition-colors"
+          />
           {site.name}
         </Link>
         <nav className="flex items-center gap-3 sm:gap-5">

@@ -9,7 +9,6 @@ categories:
 tags:
   - the-pragmatic-programmer
   - responsibility
-image: cover.jpg
 ---
 
 ![Programming cat or a chaotic technological environment](https://cdn.pixabay.com/photo/2015/09/29/13/47/cat-963931_1280.jpg)

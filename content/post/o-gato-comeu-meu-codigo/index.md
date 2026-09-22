@@ -9,7 +9,6 @@ categories:
 tags:
   - o-programador-pratico
   - responsabilidade
-image: cover.jpg
 ---
 
 ![Gato programador ou ambiente de caos tecnológico](https://cdn.pixabay.com/photo/2015/09/29/13/47/cat-963931_1280.jpg)
