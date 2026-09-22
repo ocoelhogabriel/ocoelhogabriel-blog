@@ -29,6 +29,12 @@ export const metadata: Metadata = {
     siteName: site.name,
     locale: 'pt_BR',
     type: 'website',
+    images: ['/og.png'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: site.title.pt,
+    description: site.tagline.pt,
   },
 };
 
