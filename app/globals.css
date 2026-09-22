@@ -3,27 +3,66 @@
 @tailwind utilities;
 
 /*
- * Identidade "Card on the Desk" — committed dark.
- * Tokens copiados de eco-system/brand/tokens.css (fonte canônica).
+ * Identidade "Card on the Desk" — blog (ink = índigo #8C9FC7).
+ * Dark = default (committed-dark); `.light` no <html> = a mesa à luz do dia.
+ * Tokens canônicos: eco-system/brand/tokens.css.
  */
+
+:root {
+  --desk-h: 240 7% 6%;
+  --stock-h: 225 8% 10%;
+  --bone-h: 41 37% 90%;
+  --ink-h: 221 34% 66%;
+  --dim-h: 38 10% 57%;
+
+  --ink: #8c9fc7;
+  --ink-hot: #b3c3e4;
+  --ink-rgb: 140 159 199;
+  --scrollbar-thumb: #2b2d33;
+
+  /* código: keyword=ink, string=pátina (irmã), número=cobre (irmã) */
+  --c-str: #8fb8a0;
+  --c-num: #e2a56e;
+  --c-com: #9c9486;
+}
+
+.light {
+  --desk-h: 40 26% 86%;
+  --stock-h: 44 45% 94%;
+  --bone-h: 36 23% 11%;
+  --ink-h: 224 35% 47%;
+  --dim-h: 34 12% 38%;
+
+  --ink: #4e63a4;
+  --ink-hot: #7b93d4;
+  --ink-rgb: 78 99 164;
+  --scrollbar-thumb: #c9c0b0;
+
+  --c-str: #4e7a64;
+  --c-num: #8f5429;
+  --c-com: #6e6455;
+}
 
 html {
   color-scheme: dark;
-  scrollbar-color: #2b2d33 #0e0e10;
+  scrollbar-color: var(--scrollbar-thumb) hsl(var(--desk-h));
+}
+html.light {
+  color-scheme: light;
 }
 
 body {
-  background-color: #0e0e10;
+  background-color: hsl(var(--desk-h));
   overflow-x: clip;
 }
 
 ::selection {
-  background: #8C9FC7;
-  color: #17181b;
+  background: var(--ink);
+  color: hsl(var(--stock-h));
 }
 
 :focus-visible {
-  outline: 2px solid #8C9FC7;
+  outline: 2px solid var(--ink);
   outline-offset: 3px;
 }
 
@@ -31,11 +70,11 @@ body {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #0e0e10;
+  background: hsl(var(--desk-h));
 }
 ::-webkit-scrollbar-thumb {
-  background: #2b2d33;
-  border: 2px solid #0e0e10;
+  background: var(--scrollbar-thumb);
+  border: 2px solid hsl(var(--desk-h));
   border-radius: 5px;
 }
 
@@ -49,7 +88,7 @@ a {
 .studio-light {
   background: radial-gradient(
     1200px 600px at 50% -10%,
-    rgba(140, 159, 199, 0.09),
+    rgb(var(--ink-rgb) / 0.09),
     transparent 62%
   );
 }
@@ -70,12 +109,12 @@ a {
   content: "";
   flex: 1;
   height: 1px;
-  background: linear-gradient(to right, rgba(140, 159, 199, 0.45), transparent);
+  background: linear-gradient(to right, rgb(var(--ink-rgb) / 0.45), transparent);
 }
 
-/* filete de hairline cobre */
+/* filete de hairline na tinta */
 .filete {
-  border-color: rgba(140, 159, 199, 0.25);
+  border-color: rgb(var(--ink-rgb) / 0.25);
 }
 
 /* reveal — blocos sobem ao entrar no viewport (CSS puro, sem JS) */
@@ -96,26 +135,26 @@ a {
   }
 }
 
-/* ——— Código (rehype-highlight) na paleta ——— */
-.hljs-keyword, .hljs-selector-tag, .hljs-built_in { color: #8C9FC7; }
-.hljs-string, .hljs-attr, .hljs-template-variable { color: #A9BAD9; }
-.hljs-comment, .hljs-quote { color: #9c9486; font-style: italic; }
-.hljs-number, .hljs-literal, .hljs-symbol { color: #B3C3E4; }
-.hljs-title, .hljs-name, .hljs-section { color: #efe9dc; }
-pre.hljs, .hljs { background: #17181b; }
+/* ——— Código (rehype-highlight) na paleta do eco-system ——— */
+.hljs-keyword, .hljs-selector-tag, .hljs-built_in { color: var(--ink); }
+.hljs-string, .hljs-attr, .hljs-template-variable { color: var(--c-str); }
+.hljs-comment, .hljs-quote { color: var(--c-com); font-style: italic; }
+.hljs-number, .hljs-literal, .hljs-symbol { color: var(--c-num); }
+.hljs-title, .hljs-name, .hljs-section { color: hsl(var(--bone-h)); }
+pre.hljs, .hljs { background: hsl(var(--stock-h)); }
 
 /* ——— Pagefind UI na paleta ——— */
 :root {
   --pagefind-ui-scale: 1;
-  --pagefind-ui-primary: #8C9FC7;
-  --pagefind-ui-text: #efe9dc;
-  --pagefind-ui-background: #17181b;
-  --pagefind-ui-border: rgba(140, 159, 199, 0.3);
-  --pagefind-ui-tag: rgba(140, 159, 199, 0.15);
+  --pagefind-ui-primary: var(--ink);
+  --pagefind-ui-text: hsl(var(--bone-h));
+  --pagefind-ui-background: hsl(var(--stock-h));
+  --pagefind-ui-border: rgb(var(--ink-rgb) / 0.3);
+  --pagefind-ui-tag: rgb(var(--ink-rgb) / 0.15);
   --pagefind-ui-border-width: 1px;
   --pagefind-ui-border-radius: 4px;
   --pagefind-ui-font: 'Spectral', Georgia, serif;
 }
 .pagefind-ui__search-input {
-  background-color: #0e0e10 !important;
+  background-color: hsl(var(--desk-h)) !important;
 }

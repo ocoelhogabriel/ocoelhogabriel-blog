@@ -1,17 +1,18 @@
 import type { Config } from 'tailwindcss';
 import typography from '@tailwindcss/typography';
 
-// Tokens copiados de eco-system/brand/tokens.json (fonte canônica).
+// Tokens canônicos: eco-system/brand/tokens.json — canais HSL em CSS vars,
+// `.light` no <html> redefine os canais (a mesa à luz do dia).
 const config: Config = {
   content: ['./app/**/*.{ts,tsx}', './components/**/*.{ts,tsx}', './lib/**/*.{ts,tsx}'],
   theme: {
     extend: {
       colors: {
-        desk: '#0E0E10',
-        stock: '#17181B',
-        bone: '#EFE9DC',
-        ink: '#8C9FC7',
-        dim: '#9C9486',
+        desk: 'hsl(var(--desk-h) / <alpha-value>)',
+        stock: 'hsl(var(--stock-h) / <alpha-value>)',
+        bone: 'hsl(var(--bone-h) / <alpha-value>)',
+        ink: 'hsl(var(--ink-h) / <alpha-value>)',
+        dim: 'hsl(var(--dim-h) / <alpha-value>)',
       },
       fontFamily: {
         display: ['var(--font-display)'],
@@ -20,25 +21,25 @@ const config: Config = {
       typography: () => ({
         DEFAULT: {
           css: {
-            '--tw-prose-body': '#EFE9DC',
-            '--tw-prose-headings': '#EFE9DC',
-            '--tw-prose-lead': '#9C9486',
-            '--tw-prose-links': '#8C9FC7',
-            '--tw-prose-bold': '#EFE9DC',
-            '--tw-prose-counters': '#8C9FC7',
-            '--tw-prose-bullets': '#8C9FC7',
-            '--tw-prose-hr': 'rgba(140,159,199,0.3)',
-            '--tw-prose-quotes': '#9C9486',
-            '--tw-prose-quote-borders': '#8C9FC7',
-            '--tw-prose-captions': '#9C9486',
-            '--tw-prose-code': '#EFE9DC',
-            '--tw-prose-pre-code': '#EFE9DC',
-            '--tw-prose-pre-bg': '#17181B',
-            '--tw-prose-th-borders': 'rgba(140,159,199,0.3)',
-            '--tw-prose-td-borders': 'rgba(140,159,199,0.2)',
+            '--tw-prose-body': 'hsl(var(--bone-h))',
+            '--tw-prose-headings': 'hsl(var(--bone-h))',
+            '--tw-prose-lead': 'hsl(var(--dim-h))',
+            '--tw-prose-links': 'hsl(var(--ink-h))',
+            '--tw-prose-bold': 'hsl(var(--bone-h))',
+            '--tw-prose-counters': 'hsl(var(--ink-h))',
+            '--tw-prose-bullets': 'hsl(var(--ink-h))',
+            '--tw-prose-hr': 'rgb(var(--ink-rgb) / 0.3)',
+            '--tw-prose-quotes': 'hsl(var(--dim-h))',
+            '--tw-prose-quote-borders': 'hsl(var(--ink-h))',
+            '--tw-prose-captions': 'hsl(var(--dim-h))',
+            '--tw-prose-code': 'hsl(var(--bone-h))',
+            '--tw-prose-pre-code': 'hsl(var(--bone-h))',
+            '--tw-prose-pre-bg': 'hsl(var(--stock-h))',
+            '--tw-prose-th-borders': 'rgb(var(--ink-rgb) / 0.3)',
+            '--tw-prose-td-borders': 'rgb(var(--ink-rgb) / 0.2)',
             'h1, h2, h3, h4': { fontFamily: 'var(--font-display)', fontWeight: '400' },
-            a: { textDecorationColor: 'rgba(140,159,199,0.4)' },
-            'a:hover': { textDecorationColor: '#8C9FC7' },
+            a: { textDecorationColor: 'rgb(var(--ink-rgb) / 0.4)' },
+            'a:hover': { textDecorationColor: 'hsl(var(--ink-h))' },
             blockquote: { fontStyle: 'italic' },
             img: { borderRadius: '4px' },
           },

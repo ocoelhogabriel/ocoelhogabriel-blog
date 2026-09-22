@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { localePath, altLocalePath, t, type Locale } from '@/lib/i18n';
 import { site } from '@/lib/config';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 interface Props {
   locale: Locale;
@@ -27,7 +28,7 @@ export function SiteHeader({ locale, currentPath }: Props) {
             alt=""
             width={32}
             height={32}
-            className="rounded-full border border-ink/45 shadow-[0_0_0_2px_#0e0e10,0_0_0_3px_rgba(184,115,72,0.35)] group-hover:border-ink transition-colors"
+            className="rounded-full border border-ink/45 shadow-[0_0_0_2px_hsl(var(--desk-h)),0_0_0_3px_rgb(var(--ink-rgb)/0.35)] group-hover:border-ink transition-colors"
           />
           {site.name}
         </Link>
@@ -56,6 +57,7 @@ export function SiteHeader({ locale, currentPath }: Props) {
           >
             {locale === 'pt' ? 'EN' : 'PT'}
           </Link>
+          <ThemeToggle />
         </nav>
       </div>
     </header>
