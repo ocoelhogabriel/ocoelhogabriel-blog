@@ -32,7 +32,7 @@ export async function HomePage({ locale }: { locale: Locale }) {
   return (
     <Shell locale={locale} currentPath="/">
       <header className="mb-10">
-        <p className="text-xs uppercase tracking-[0.32em] text-copper mb-3">
+        <p className="text-xs uppercase tracking-[0.32em] text-ink mb-3">
           {site.tagline[locale]}
         </p>
         <h1 className="font-display text-4xl sm:text-5xl text-bone tracking-[-0.015em]">
@@ -62,7 +62,7 @@ function TaxonomyChips({ entry, locale }: { entry: Entry; locale: Locale }) {
         <Link
           key={href}
           href={href}
-          className="text-[11px] uppercase tracking-[0.18em] text-dim border border-copper/30 rounded px-2 py-1 hover:text-copper hover:border-copper/60 transition-colors"
+          className="text-[11px] uppercase tracking-[0.18em] text-dim border border-ink/30 rounded px-2 py-1 hover:text-ink hover:border-ink/60 transition-colors"
         >
           {name}
         </Link>
@@ -94,8 +94,8 @@ export async function PostPage({ slug, locale }: { slug: string; locale: Locale 
         </header>
 
         {post.toc.length > 2 && (
-          <nav className="border border-copper/25 rounded-md bg-stock px-5 py-4 mb-10">
-            <p className="engraved-title text-[11px] uppercase text-copper mb-3">
+          <nav className="border border-ink/25 rounded-md bg-stock px-5 py-4 mb-10">
+            <p className="engraved-title text-[11px] uppercase text-ink mb-3">
               {t(locale, 'toc')}
             </p>
             <ul className="space-y-1.5">
@@ -103,7 +103,7 @@ export async function PostPage({ slug, locale }: { slug: string; locale: Locale 
                 <li key={item.id} style={{ paddingLeft: `${(item.depth - 2) * 1.25}rem` }}>
                   <a
                     href={`#${item.id}`}
-                    className="text-sm text-dim hover:text-copper transition-colors"
+                    className="text-sm text-dim hover:text-ink transition-colors"
                   >
                     {item.text}
                   </a>
@@ -115,8 +115,8 @@ export async function PostPage({ slug, locale }: { slug: string; locale: Locale 
 
         <MarkdownBody html={post.html} />
 
-        <div className="mt-16 pt-8 border-t border-copper/25">
-          <p className="engraved-title text-[11px] uppercase text-copper mb-2">
+        <div className="mt-16 pt-8 border-t border-ink/25">
+          <p className="engraved-title text-[11px] uppercase text-ink mb-2">
             {t(locale, 'comments')}
           </p>
           <DisqusComments
@@ -163,7 +163,7 @@ export async function ArchivesPage({ locale }: { locale: Locale }) {
       <h1 className="engraved-title text-sm uppercase mb-8">{t(locale, 'archives')}</h1>
       {[...byYear.entries()].map(([year, yearPosts]) => (
         <section key={year} className="mb-10">
-          <h2 className="font-display text-2xl text-copper mb-2">{year}</h2>
+          <h2 className="font-display text-2xl text-ink mb-2">{year}</h2>
           <PostList posts={yearPosts} locale={locale} />
         </section>
       ))}

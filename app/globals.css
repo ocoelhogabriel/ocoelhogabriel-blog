@@ -18,12 +18,12 @@ body {
 }
 
 ::selection {
-  background: #b87348;
+  background: #8C9FC7;
   color: #17181b;
 }
 
 :focus-visible {
-  outline: 2px solid #b87348;
+  outline: 2px solid #8C9FC7;
   outline-offset: 3px;
 }
 
@@ -49,7 +49,7 @@ a {
 .studio-light {
   background: radial-gradient(
     1200px 600px at 50% -10%,
-    rgba(184, 115, 72, 0.09),
+    rgba(140, 159, 199, 0.09),
     transparent 62%
   );
 }
@@ -70,12 +70,12 @@ a {
   content: "";
   flex: 1;
   height: 1px;
-  background: linear-gradient(to right, rgba(184, 115, 72, 0.45), transparent);
+  background: linear-gradient(to right, rgba(140, 159, 199, 0.45), transparent);
 }
 
 /* filete de hairline cobre */
 .filete {
-  border-color: rgba(184, 115, 72, 0.25);
+  border-color: rgba(140, 159, 199, 0.25);
 }
 
 /* reveal — blocos sobem ao entrar no viewport (CSS puro, sem JS) */
@@ -97,21 +97,21 @@ a {
 }
 
 /* ——— Código (rehype-highlight) na paleta ——— */
-.hljs-keyword, .hljs-selector-tag, .hljs-built_in { color: #b87348; }
-.hljs-string, .hljs-attr, .hljs-template-variable { color: #d9a06e; }
+.hljs-keyword, .hljs-selector-tag, .hljs-built_in { color: #8C9FC7; }
+.hljs-string, .hljs-attr, .hljs-template-variable { color: #A9BAD9; }
 .hljs-comment, .hljs-quote { color: #9c9486; font-style: italic; }
-.hljs-number, .hljs-literal, .hljs-symbol { color: #e2a56e; }
+.hljs-number, .hljs-literal, .hljs-symbol { color: #B3C3E4; }
 .hljs-title, .hljs-name, .hljs-section { color: #efe9dc; }
 pre.hljs, .hljs { background: #17181b; }
 
 /* ——— Pagefind UI na paleta ——— */
 :root {
   --pagefind-ui-scale: 1;
-  --pagefind-ui-primary: #b87348;
+  --pagefind-ui-primary: #8C9FC7;
   --pagefind-ui-text: #efe9dc;
   --pagefind-ui-background: #17181b;
-  --pagefind-ui-border: rgba(184, 115, 72, 0.3);
-  --pagefind-ui-tag: rgba(184, 115, 72, 0.15);
+  --pagefind-ui-border: rgba(140, 159, 199, 0.3);
+  --pagefind-ui-tag: rgba(140, 159, 199, 0.15);
   --pagefind-ui-border-width: 1px;
   --pagefind-ui-border-radius: 4px;
   --pagefind-ui-font: 'Spectral', Georgia, serif;

@@ -8,7 +8,7 @@ export function PostList({ posts, locale }: { posts: Entry[]; locale: Locale }) 
     return <p className="text-dim italic">{t(locale, 'noPosts')}</p>;
   }
   return (
-    <ul className="divide-y divide-copper/20">
+    <ul className="divide-y divide-ink/20">
       {posts.map((post) => (
         <li key={post.slug}>
           <Link
@@ -16,7 +16,7 @@ export function PostList({ posts, locale }: { posts: Entry[]; locale: Locale }) 
             className="group flex items-baseline justify-between gap-4 py-5"
           >
             <span className="min-w-0">
-              <span className="font-display text-lg text-bone group-hover:text-copper transition-colors block">
+              <span className="font-display text-lg text-bone group-hover:text-ink transition-colors block">
                 {post.title}
               </span>
               {post.description && (
