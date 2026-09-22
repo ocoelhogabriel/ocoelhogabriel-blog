@@ -1,18 +1,18 @@
 ---
 title: "About Me"
-description: "Java Software Engineer focusing on system architecture and Spring Framework"
+description: "Software Engineer — backend Java, Spring Boot and Quarkus, focused on software architecture"
 date: 2026-02-19
 slug: "about"
 layout: "page"
 ---
 
-Hello! I'm **Gabriel Coelho**, a Software Engineer focusing on the **Java / Spring Framework** ecosystem.
+Hello! I'm **Gabriel Coelho**, a backend Software Engineer in the **Java — Spring Boot and Quarkus** ecosystem, focused on software architecture.
 
 ## Trajectory
 
 I have been working with software development for a few years, with experience in:
 
-- **Java Back-end**: Spring Boot, Spring Data JPA, Spring Security, Spring Cloud
+- **Java Back-end**: Spring Boot, Quarkus, Spring Data JPA, Spring Security, Spring Cloud
 - **Architecture**: RESTful APIs, microservices, Design Patterns (Clean Architecture, DDD)
 - **Data**: JPA/Hibernate, PostgreSQL, MySQL, Redis
 - **DevOps**: Docker, CI/CD, GitHub Actions, Linux
@@ -31,3 +31,5 @@ I have been working with software development for a few years, with experience i
 
 - 💻 [GitHub](https://github.com/ocoelhogabriel)
 - 💼 [LinkedIn](https://linkedin.com/in/ocoelhogabriel)
+- 🌐 [Portfolio](https://ocoelhogabriel.vercel.app)
+- ✉️ [gabriel.coelho.hgc@outlook.com.br](mailto:gabriel.coelho.hgc@outlook.com.br)

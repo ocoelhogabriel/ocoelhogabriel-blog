@@ -7,7 +7,7 @@ export const site = {
     en: 'Dev Log | Gabriel Coelho',
   },
   tagline: {
-    pt: 'Engenheiro de Software | Spring Framework',
-    en: 'Software Engineer | Spring Framework',
+    pt: 'Backend Java & Spring Boot e Quarkus, com foco em arquitetura de software.',
+    en: 'Backend Java & Spring Boot and Quarkus, focused on software architecture.',
   },
 } as const;
