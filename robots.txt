@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://ocoelhogabriel.github.io/ocoelhogabriel-blog/sitemap.xml
