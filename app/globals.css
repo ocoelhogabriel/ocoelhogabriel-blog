@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Identidade "Card on the Desk" — committed dark.
+ * Tokens copiados de eco-system/brand/tokens.css (fonte canônica).
+ */
+
+html {
+  color-scheme: dark;
+  scrollbar-color: #2b2d33 #0e0e10;
+}
+
+body {
+  background-color: #0e0e10;
+  overflow-x: clip;
+}
+
+::selection {
+  background: #b87348;
+  color: #17181b;
+}
+
+:focus-visible {
+  outline: 2px solid #b87348;
+  outline-offset: 3px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0e0e10;
+}
+::-webkit-scrollbar-thumb {
+  background: #2b2d33;
+  border: 2px solid #0e0e10;
+  border-radius: 5px;
+}
+
+a {
+  text-underline-offset: 4px;
+}
+
+/* ——— Motivos print-shop ——— */
+
+/* luz de estúdio sobre a mesa */
+.studio-light {
+  background: radial-gradient(
+    1200px 600px at 50% -10%,
+    rgba(184, 115, 72, 0.09),
+    transparent 62%
+  );
+}
+
+/* título de seção gravado: fleuron + small caps + filete */
+.engraved-title {
+  letter-spacing: 0.32em;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.engraved-title::before {
+  content: "❧";
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+.engraved-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, rgba(184, 115, 72, 0.45), transparent);
+}
+
+/* filete de hairline cobre */
+.filete {
+  border-color: rgba(184, 115, 72, 0.25);
+}
+
+/* reveal — blocos sobem ao entrar no viewport (CSS puro, sem JS) */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+      animation-timeline: view();
+      animation-range: entry 5% entry 45%;
+    }
+  }
+}
+
+/* ——— Código (rehype-highlight) na paleta ——— */
+.hljs-keyword, .hljs-selector-tag, .hljs-built_in { color: #b87348; }
+.hljs-string, .hljs-attr, .hljs-template-variable { color: #d9a06e; }
+.hljs-comment, .hljs-quote { color: #9c9486; font-style: italic; }
+.hljs-number, .hljs-literal, .hljs-symbol { color: #e2a56e; }
+.hljs-title, .hljs-name, .hljs-section { color: #efe9dc; }
+pre.hljs, .hljs { background: #17181b; }
+
+/* ——— Pagefind UI na paleta ——— */
+:root {
+  --pagefind-ui-scale: 1;
+  --pagefind-ui-primary: #b87348;
+  --pagefind-ui-text: #efe9dc;
+  --pagefind-ui-background: #17181b;
+  --pagefind-ui-border: rgba(184, 115, 72, 0.3);
+  --pagefind-ui-tag: rgba(184, 115, 72, 0.15);
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-border-radius: 4px;
+  --pagefind-ui-font: 'Spectral', Georgia, serif;
+}
+.pagefind-ui__search-input {
+  background-color: #0e0e10 !important;
+}

@@ -1,37 +1,54 @@
-name: Deploy Hugo to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   workflow_dispatch:
 
 permissions:
   contents: write
 
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout código-fonte
-        uses: actions/checkout@v4
-        with:
-          submodules: recursive # Baixa o tema Stack como submódulo
-          fetch-depth: 0 # Necessário para lastmod correto
+      - uses: actions/checkout@v4
 
-      - name: Configurar Hugo Extended
-        uses: peaceiris/actions-hugo@v3
+      - uses: actions/setup-node@v4
         with:
-          hugo-version: "latest"
-          extended: true # Stack requer suporte a SCSS/PostCSS
+          node-version: 20
 
-      - name: Build com minificação
-        run: hugo --minify
+      # Repo "<owner>.github.io" serve na raiz do domínio (sem base path).
+      # Qualquer outro nome serve em "<owner>.github.io/<repo>" — o site
+      # precisa saber o próprio base path em tempo de build.
+      - name: Resolve base path
+        id: base-path
+        run: |
+          REPO_NAME="${GITHUB_REPOSITORY#*/}"
+          if [[ "$REPO_NAME" == *.github.io ]]; then
+            echo "value=" >> "$GITHUB_OUTPUT"
+          else
+            echo "value=/$REPO_NAME" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Sem package-lock commitado (convenção do repo) — npm install, não npm ci.
+      - name: Install dependencies
+        run: npm install
+
+      # Build gera out/ + índice Pagefind (postbuild).
+      - name: Build
+        env:
+          BASE_PATH: ${{ steps.base-path.outputs.value }}
+        run: npm run build
 
       - name: Deploy para gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          publish_dir: ./out
           publish_branch: gh-pages
           commit_message: "Deploy: ${{ github.event.head_commit.message }}"

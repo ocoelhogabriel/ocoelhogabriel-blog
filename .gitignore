@@ -1,14 +1,21 @@
-# Hugo build output
-public/
-resources/_gen/
+# Next.js build output
+.next/
+out/
 
-# Node (PostCSS / Autoprefixer)
+# Node
 node_modules/
 package-lock.json
 
 # macOS
 .DS_Store
 
+# TypeScript
+*.tsbuildinfo
+
+# Preview local do export estático (espelho de out/ sob o basePath)
+.preview/
+
 # IDE
 .vscode/
 .idea/
+.specsmd/
