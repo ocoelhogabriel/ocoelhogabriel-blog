@@ -1,60 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dev Log | Gabriel Coelho</title><link>https://ocoelhogabriel.github.io/ogc-blog/</link><description>Recent content on Dev Log | Gabriel Coelho</description><generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Tue, 24 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://ocoelhogabriel.github.io/ogc-blog/index.xml" rel="self" type="application/rss+xml"/><item><title>O Programador Prático: O gato comeu meu código - Administrando seu Repositório</title><link>https://ocoelhogabriel.github.io/ogc-blog/p/o-gato-comeu-meu-codigo/</link><pubDate>Tue, 24 Feb 2026 00:00:00 +0000</pubDate><guid>https://ocoelhogabriel.github.io/ogc-blog/p/o-gato-comeu-meu-codigo/</guid><description>&lt;p&gt;&lt;img src="https://ocoelhogabriel.github.io/ogc-blog/cat-963931_1280_451382982400069560.jpg"
-	width="1280"
-	height="857"
-	loading="lazy"
-	
-		alt="Gato programador ou ambiente de caos tecnológico"
-	
- 
-	
-		class="gallery-image" 
-		data-flex-grow="149"
-		data-flex-basis="358px"
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;Todos nós já passamos por isso. O prazo está estourando, um bug crítico aparece no ambiente de staging ou o banco de dados corrompe. A reação instintiva de muita gente é procurar um culpado: &amp;ldquo;O fornecedor atrasou&amp;rdquo;, &amp;ldquo;A biblioteca está com bug&amp;rdquo;, ou a clássica desculpa escolar adaptada para o backend: &lt;strong&gt;&amp;ldquo;O gato comeu meu código-fonte&amp;rdquo;&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;No entanto, a diferença entre um desenvolvedor comum e um &lt;strong&gt;Programador Pragmático&lt;/strong&gt; começa exatamente aqui: na postura técnica em relação à responsabilidade.&lt;/p&gt;
-&lt;h2 id="a-responsabilidade-é-uma-escolha-ativa"&gt;&lt;a href="#a-responsabilidade-%c3%a9-uma-escolha-ativa" class="header-anchor"&gt;&lt;/a&gt;A Responsabilidade é uma Escolha Ativa
-&lt;/h2&gt;&lt;p&gt;No desenvolvimento de software, a responsabilidade é algo que você assume ativamente. Quando você aceita uma task, define uma arquitetura ou sobe um serviço em Spring Boot, você está se comprometendo a entregar aquilo funcionando.&lt;/p&gt;
-&lt;p&gt;O ponto chave do item 1.1 do livro não é sobre ter controle total sobre o universo (sabemos que o hardware falha e o Wi-Fi cai), mas sobre como lidamos com as falhas quando elas inevitavelmente ocorrem. Um programador pragmático não tenta esconder seus erros sob o tapete ou ignorar o débito técnico. Ele é honesto, direto e focado na solução.&lt;/p&gt;
-&lt;h2 id="o-teste-do-gato-ou-do-pato-de-borracha"&gt;&lt;a href="#o-teste-do-gato-ou-do-pato-de-borracha" class="header-anchor"&gt;&lt;/a&gt;O Teste do Gato (ou do Pato de Borracha)
-&lt;/h2&gt;&lt;p&gt;Quando algo dá errado, o instinto de defesa nos faz criar justificativas. Antes de correr para o seu tech lead e dizer que a culpa é do servidor, os autores Andrew Hunt e David Thomas sugerem um exercício mental simples:&lt;/p&gt;
-
- &lt;blockquote&gt;
- &lt;p&gt;&lt;em&gt;&amp;ldquo;Antes de abordar alguém para dizer por que algo não pode ser feito, pare e escute a si próprio. Converse com o pato de borracha no seu monitor ou com o gato. Sua desculpa parece convincente ou soa como amadorismo?&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
-
- &lt;/blockquote&gt;
-&lt;p&gt;Se o seu código sumiu porque você não deu push, a falha não é da máquina. A responsabilidade técnica era ter um fluxo de trabalho seguro. Se você não tinha um plano de contingência para um risco que sabia que existia, a falha é sua.&lt;/p&gt;
-&lt;h2 id="ofereça-opções-não-desculpas"&gt;&lt;a href="#ofere%c3%a7a-op%c3%a7%c3%b5es-n%c3%a3o-desculpas" class="header-anchor"&gt;&lt;/a&gt;Ofereça Opções, Não Desculpas
-&lt;/h2&gt;&lt;p&gt;A lição mais valiosa aqui é a mudança de mentalidade de &amp;ldquo;dar desculpas&amp;rdquo; para &amp;ldquo;fornecer opções&amp;rdquo;.&lt;/p&gt;
-&lt;p&gt;Um programador pragmático analisa o incidente e apresenta soluções alternativas. Em vez de apenas dizer que &amp;ldquo;o código não está pronto&amp;rdquo;, tente:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&amp;ldquo;Não vamos entregar a funcionalidade completa hoje, mas podemos subir o MVP com os endpoints X e Y e finalizar o Z amanhã.&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;&amp;ldquo;O servidor caiu, mas o backup de ontem está íntegro e consigo restaurar em 2 horas.&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;&amp;ldquo;Tivemos um conflito de merge complexo; se eu focar nisso agora com ajuda do Fulano, resolvemos até o final do dia.&amp;rdquo;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Ao fazer isso, você tira o foco da falha e coloca na resolução, demonstrando controle sobre o projeto.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://ocoelhogabriel.github.io/ogc-blog/laptop-1839876_1280_4408746520264064125.jpg"
-	width="1280"
-	height="853"
-	loading="lazy"
-	
-		alt="Ambiente de trabalho organizado"
-	
- 
-	
-		class="gallery-image" 
-		data-flex-grow="150"
-		data-flex-basis="360px"
-	
-&gt;&lt;/p&gt;
-&lt;h2 id="caso-real-quando-o-gato-realmente-comeu-meu-código"&gt;&lt;a href="#caso-real-quando-o-gato-realmente-comeu-meu-c%c3%b3digo" class="header-anchor"&gt;&lt;/a&gt;Caso Real: Quando o gato realmente &amp;ldquo;comeu&amp;rdquo; meu código
-&lt;/h2&gt;&lt;p&gt;Já vivi exatamente essa situação. Em um projeto que eu era o único responsável por desenvolver um produto novo do zero, acabei perdendo uma parte de tudo o que tinha feito até aquele momento.&lt;/p&gt;
-&lt;p&gt;Eu já tinha feito o estudo técnico, analisado as documentações e boa parte das funcionalidades principais já estava rodando em uma primeira versão de testes. O que eu perdi não foi apenas a correção de um bug simples, mas implementações prontas, testes validados e regras de negócio complexas que haviam sido ajustadas especificamente para o cenário da empresa.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;E o que eu fiz? Sentei no chão e chorei?&lt;/strong&gt; Não.&lt;/p&gt;
-&lt;p&gt;Fui direto ao meu líder e joguei limpo: expliquei que havia perdido as alterações em meio aos commits e que precisaria refazer o trabalho. Como o raciocínio estava fresco na memória e a arquitetura já estava definida, só disse ao meu lider que eu resolveria, e sentei para codar novamente. O resultado? O código saiu muito melhor do que estava antes, mais limpo e performático.&lt;/p&gt;
-&lt;p&gt;Hoje, meu workflow mudou. Mesmo que seja um ajuste pequeno em uma propriedade do projeto, eu realizo o commit. Tenho em mente que meu trabalho só está seguro quando está no repositório.&lt;/p&gt;
-&lt;h2 id="conclusão-confiança-se-constrói-com-honestidade"&gt;&lt;a href="#conclus%c3%a3o-confian%c3%a7a-se-constr%c3%b3i-com-honestidade" class="header-anchor"&gt;&lt;/a&gt;Conclusão: Confiança se Constrói com Honestidade
-&lt;/h2&gt;&lt;p&gt;Assumir a responsabilidade pelas falhas não é sinal de fraqueza; é sinal de senioridade. Quando seus colegas sabem que você não vai tentar enganá-los com desculpas criativas, eles passam a confiar no seu julgamento técnico.&lt;/p&gt;
-&lt;p&gt;Na próxima vez que algo der errado — e vai dar —, deixe o gato em paz. Respire fundo, avalie os danos, prepare opções viáveis e assuma o controle do seu código.&lt;/p&gt;
-&lt;hr&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Dev Log | Gabriel Coelho</title>
+    <link>https://ocoelhogabriel.github.io/ocoelhogabriel-blog</link>
+    <description>Engenheiro de Software | Spring Framework</description>
+    <language>pt-BR</language>
+    <item>
+      <title>O Programador Prático: O gato comeu meu código - Administrando seu Repositório</title>
+      <link>https://ocoelhogabriel.github.io/ocoelhogabriel-blog/p/o-gato-comeu-meu-codigo</link>
+      <guid isPermaLink="true">https://ocoelhogabriel.github.io/ocoelhogabriel-blog/p/o-gato-comeu-meu-codigo</guid>
+      <pubDate>Tue, 24 Feb 2026 00:00:00 GMT</pubDate>
+      <description>Quando inventamos desculpas para nossos erros, perdemos a oportunidade de aprender e evoluir.</description>
+    </item>
+  </channel>
+</rss>
