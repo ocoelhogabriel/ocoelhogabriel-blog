@@ -18,6 +18,8 @@ I have been working with software development for a few years, with experience i
 - **DevOps**: Docker, CI/CD, GitHub Actions, Linux
 - **Best Practices**: TDD, Clean Code, Code Review
 
+Active in the Brazilian Java community (**SouJava**, **Brasil JUG**) — meetups and event recaps.
+
 ## This Blog
 
 **Dev Log** is my space to document studies, experiments, and daily learnings as a Java engineer. Here you will find:

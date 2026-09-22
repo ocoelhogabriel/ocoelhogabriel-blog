@@ -18,9 +18,12 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = await getPost(slug, 'pt');
   if (!post) return {};
+  const og = `/og/${slug}.png`;
   return {
     title: `${post.title} · ${site.title.pt}`,
     description: post.description,
+    openGraph: { images: [og] },
+    twitter: { card: 'summary_large_image', images: [og] },
   };
 }
 

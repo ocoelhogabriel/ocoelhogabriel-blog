@@ -18,6 +18,8 @@ Trabalho com desenvolvimento de software há alguns anos, com experiência em:
 - **DevOps**: Docker, CI/CD, GitHub Actions, Linux
 - **Boas Práticas**: TDD, Clean Code, Code Review
 
+Participação ativa na comunidade Java brasileira (**SouJava**, **Brasil JUG**) — presença em meetups e recaps de eventos.
+
 ## Este Blog
 
 O **Dev Log** é o meu espaço para documentar estudos, experimentos e aprendizados do dia a dia de um engenheiro Java. Aqui você encontrará:

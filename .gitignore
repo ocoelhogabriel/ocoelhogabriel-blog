@@ -4,7 +4,6 @@ out/
 
 # Node
 node_modules/
-package-lock.json
 
 # macOS
 .DS_Store
@@ -19,3 +18,7 @@ package-lock.json
 .vscode/
 .idea/
 .specsmd/
+
+# og cards gerados por scripts/build-og.mjs (prebuild)
+public/og/
+public/en/og/

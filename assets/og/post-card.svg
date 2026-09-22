@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <!-- OG card por post — mesma cartolina do card-matriz, índigo do Dev Log.
+       Placeholders substituídos pelo build-og.mjs. -->
+  <defs>
+    <radialGradient id="desk" cx="50%" cy="-12%" r="85%">
+      <stop offset="0%" stop-color="#232326"/>
+      <stop offset="55%" stop-color="#141416"/>
+      <stop offset="100%" stop-color="#0E0E10"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#desk)"/>
+
+  <rect x="150" y="115" width="900" height="400" rx="14" fill="#17181B"/>
+  <rect x="150" y="115" width="900" height="400" rx="14" fill="none"
+        stroke="%INK%" stroke-opacity="0.5" stroke-width="1.5"/>
+  <rect x="166" y="131" width="868" height="368" rx="9" fill="none"
+        stroke="%INK%" stroke-opacity="0.22" stroke-width="1"/>
+
+  <text x="600" y="195" text-anchor="middle"
+        font-family="Marcellus, 'Times New Roman', serif" font-size="23"
+        fill="%INK%" letter-spacing="14">%EYEBROW%</text>
+
+  %TITLE_BLOCK%
+
+  <line x1="330" y1="%ORNAMENT_Y%" x2="560" y2="%ORNAMENT_Y%" stroke="%INK%" stroke-width="1.4" stroke-opacity="0.8"/>
+  <path d="M600 %ODY1% L609 %ORNAMENT_Y% L600 %ODY2% L591 %ORNAMENT_Y% Z" fill="%INK%"/>
+  <line x1="640" y1="%ORNAMENT_Y%" x2="870" y2="%ORNAMENT_Y%" stroke="%INK%" stroke-width="1.4" stroke-opacity="0.8"/>
+
+  <text x="600" y="%SUB_Y%" text-anchor="middle"
+        font-family="Spectral, Georgia, serif" font-style="italic" font-size="28"
+        fill="#9C9486">%SUB%</text>
+</svg>

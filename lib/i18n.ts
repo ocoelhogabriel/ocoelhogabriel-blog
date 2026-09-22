@@ -18,6 +18,9 @@ const strings = {
     searchHeading: 'Buscar artigos',
     footerLine: 'Impresso em pixels · São Paulo',
     notFound: 'Página não encontrada',
+    notFoundEyebrow: 'cartão extraviado',
+    notFoundMsg: 'A página que você procura não está neste arquivo.',
+    notFoundBack: 'voltar aos artigos',
   },
   en: {
     articles: 'Posts',
@@ -33,6 +36,9 @@ const strings = {
     searchHeading: 'Search posts',
     footerLine: 'Printed in pixels · São Paulo',
     notFound: 'Page not found',
+    notFoundEyebrow: 'misfiled card',
+    notFoundMsg: 'The page you are looking for is not in this file.',
+    notFoundBack: 'back to posts',
   },
 } as const;
 
